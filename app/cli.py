@@ -1,18 +1,27 @@
 """Interactive CLI for To do - Jev."""
+import sys
 import asyncio
 from typing import Optional
 import typer
 from rich.console import Console
 from rich.table import Table
 from rich.panel import Panel
+
+if sys.platform == "win32":
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+        sys.stderr.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
 from app.router import TaskRouter
 from app.classifier import JevClassifier
 from app.config import Settings, settings as default_settings
 from app.skill_registry import SkillRegistry
 from app.skill_profiles import TOP_STAR_SKILL_PROFILES
 
-app = typer.Typer(help="⚡ To do - Jev: Intelligent Task Classifier & 3-Tier Router")
-console = Console()
+app = typer.Typer(help="[To do - Jev] Intelligent Task Classifier & 3-Tier Router")
+console = Console(legacy_windows=False)
 
 async def run_routing(
     prompt: str,
