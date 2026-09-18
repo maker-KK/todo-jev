@@ -1,0 +1,1768 @@
+{
+  "metadata": {
+    "evaluated_at": "2026-09-18T19:40:49",
+    "model": "jev-latest",
+    "api_endpoint": "https://api.typesafe.ai/v1/systemone",
+    "unseen_eval_count": 60
+  },
+  "summary": {
+    "total_eval_samples": 60,
+    "baseline_accuracy": 0.9167,
+    "profile_accuracy": 0.9333,
+    "accuracy_delta": 0.0167,
+    "positive_skill_accuracy": {
+      "baseline": "20/20 (100.0%)",
+      "profile": "20/20 (100.0%)"
+    },
+    "negative_veto_accuracy": {
+      "baseline": "10/15 (66.7%)",
+      "profile": "11/15 (73.3%)"
+    },
+    "average_latency_ms": {
+      "baseline": 1047.9,
+      "profile": 1047.7
+    }
+  },
+  "details": [
+    {
+      "id": "eval-pos-01",
+      "prompt": "구독 관리 기능 명세를 EARS 표기법으로 작성하고 체크포인트 분할해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 2",
+      "expected_skill": "tlc-spec-driven",
+      "baseline": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "tlc-spec-driven",
+        "matching_rate": 0.8134,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 1097.0,
+        "correct": true,
+        "rationale": "Top Star 스킬 [Spec-Driven Feature Planner (EARS)]과 81.3% 매칭. 사전환경 통과: Git repository detected (.git folder found)."
+      },
+      "profile": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "tlc-spec-driven",
+        "matching_rate": 0.7221,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 945.7,
+        "correct": true,
+        "rationale": "Top Star 스킬 [Spec-Driven Feature Planner (EARS)]과 72.2% 매칭. 사전환경 통과: Git repository detected (.git folder found)."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-pos-02",
+      "prompt": "주문 도메인과 재고 도메인의 강한 결합도를 분석하고 바운디드 컨텍스트 분리해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 2",
+      "expected_skill": "tactical-ddd",
+      "baseline": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "tactical-ddd",
+        "matching_rate": 0.68,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 982.1,
+        "correct": true,
+        "rationale": "Top Star 스킬 [Tactical Domain-Driven Design]과 68.0% 매칭. 사전환경 통과: Git repository detected (.git folder found)."
+      },
+      "profile": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "tactical-ddd",
+        "matching_rate": 0.6528,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 966.8,
+        "correct": true,
+        "rationale": "Top Star 스킬 [Tactical Domain-Driven Design]과 65.3% 매칭. 사전환경 통과: Git repository detected (.git folder found)."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-pos-03",
+      "prompt": "장바구니 담기 후 결제완료까지 브라우저 동작 E2E 시나리오 Playwright로 검증해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 2",
+      "expected_skill": "playwright-skill",
+      "baseline": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "playwright-skill",
+        "matching_rate": 0.7821,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 926.3,
+        "correct": true,
+        "rationale": "Top Star 스킬 [Playwright Browser Automator]과 78.2% 매칭. 사전환경 통과: Node.js environment detected (package.json or node binary)."
+      },
+      "profile": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "playwright-skill",
+        "matching_rate": 0.8,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 909.8,
+        "correct": true,
+        "rationale": "Top Star 스킬 [Playwright Browser Automator]과 80.0% 매칭. 사전환경 통과: Node.js environment detected (package.json or node binary)."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-pos-04",
+      "prompt": "백엔드 API 서버의 SQL Injection 취약점 점검 및 보안 SAST 분석 리포트 생성해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 2",
+      "expected_skill": "security-best-practices",
+      "baseline": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "security-best-practices",
+        "matching_rate": 0.76,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 1075.4,
+        "correct": true,
+        "rationale": "Top Star 스킬 [Security Best Practices & SAST Auditor]과 76.0% 매칭. 사전환경 통과: Dependency manifest found: requirements.txt, pyproject.toml."
+      },
+      "profile": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "security-best-practices",
+        "matching_rate": 0.76,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 923.9,
+        "correct": true,
+        "rationale": "Top Star 스킬 [Security Best Practices & SAST Auditor]과 76.0% 매칭. 사전환경 통과: Dependency manifest found: requirements.txt, pyproject.toml."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-pos-05",
+      "prompt": "피그마 디자인 시안의 컬러 팔레트와 버튼 컴포넌트 React 코드로 추출해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 2",
+      "expected_skill": "figma-implement-design",
+      "baseline": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "figma-implement-design",
+        "matching_rate": 0.7227,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 932.8,
+        "correct": true,
+        "rationale": "Top Star 스킬 [Figma Design-to-Code Converter]과 72.3% 매칭. 사전환경 통과: Frontend UI workspace structure detected."
+      },
+      "profile": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "figma-implement-design",
+        "matching_rate": 0.74,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 894.5,
+        "correct": true,
+        "rationale": "Top Star 스킬 [Figma Design-to-Code Converter]과 74.0% 매칭. 사전환경 통과: Frontend UI workspace structure detected."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-pos-06",
+      "prompt": "이번 PR 변경사항에 대해 테스트 통과 여부와 엣지 케이스를 독립 검증자로 채점해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 2",
+      "expected_skill": "the-judge",
+      "baseline": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "the-judge",
+        "matching_rate": 0.6534,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 964.8,
+        "correct": true,
+        "rationale": "Top Star 스킬 [The Judge: Adversarial Code Reviewer]과 65.3% 매칭. 사전환경 통과: Python test harness detected (pytest/pyproject/tests)."
+      },
+      "profile": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "the-judge",
+        "matching_rate": 0.66,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 948.6,
+        "correct": true,
+        "rationale": "Top Star 스킬 [The Judge: Adversarial Code Reviewer]과 66.0% 매칭. 사전환경 통과: Python test harness detected (pytest/pyproject/tests)."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-pos-07",
+      "prompt": "GitHub Actions 파이프라인에서 npm test 단계가 깨진 원인을 분석하고 고쳐줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 2",
+      "expected_skill": "gh-fix-ci",
+      "baseline": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "gh-fix-ci",
+        "matching_rate": 0.72,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 922.9,
+        "correct": true,
+        "rationale": "Top Star 스킬 [GitHub Actions & CI Root-Cause Fixer]과 72.0% 매칭. 사전환경 통과: Git repository detected (.git folder found)."
+      },
+      "profile": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "gh-fix-ci",
+        "matching_rate": 0.71,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 1389.5,
+        "correct": true,
+        "rationale": "Top Star 스킬 [GitHub Actions & CI Root-Cause Fixer]과 71.0% 매칭. 사전환경 통과: Git repository detected (.git folder found)."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-pos-08",
+      "prompt": "모바일 웹 첫 로딩 시 LCP가 4초 이상 걸리는데 렌더링 병목 진단해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 2",
+      "expected_skill": "core-web-vitals",
+      "baseline": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "core-web-vitals",
+        "matching_rate": 0.7821,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 1370.8,
+        "correct": true,
+        "rationale": "Top Star 스킬 [Core Web Vitals Optimizer (LCP/INP/CLS)]과 78.2% 매칭. 사전환경 통과: Frontend UI workspace structure detected."
+      },
+      "profile": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "core-web-vitals",
+        "matching_rate": 0.7722,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 967.0,
+        "correct": true,
+        "rationale": "Top Star 스킬 [Core Web Vitals Optimizer (LCP/INP/CLS)]과 77.2% 매칭. 사전환경 통과: Frontend UI workspace structure detected."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-pos-09",
+      "prompt": "메시지 큐로 RabbitMQ 대신 Kafka를 도입하기로 한 아키텍처 결정 기록(ADR) 작성해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 2",
+      "expected_skill": "create-adr",
+      "baseline": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "create-adr",
+        "matching_rate": 0.76,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 998.0,
+        "correct": true,
+        "rationale": "Top Star 스킬 [Architecture Decision Record (ADR) Generator]과 76.0% 매칭. 사전환경 통과: Git repository detected (.git folder found)."
+      },
+      "profile": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "create-adr",
+        "matching_rate": 0.76,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 1082.1,
+        "correct": true,
+        "rationale": "Top Star 스킬 [Architecture Decision Record (ADR) Generator]과 76.0% 매칭. 사전환경 통과: Git repository detected (.git folder found)."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-pos-10",
+      "prompt": "전사 마이크로서비스 간 공통 gRPC 프로토콜 전환을 위한 기술 RFC 문서 작성해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 2",
+      "expected_skill": "create-rfc",
+      "baseline": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "create-rfc",
+        "matching_rate": 0.64,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 968.8,
+        "correct": true,
+        "rationale": "Top Star 스킬 [Request For Comments (RFC) Proposal Builder]과 64.0% 매칭. 사전환경 통과: Git repository detected (.git folder found)."
+      },
+      "profile": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "create-rfc",
+        "matching_rate": 0.63,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 1017.6,
+        "correct": true,
+        "rationale": "Top Star 스킬 [Request For Comments (RFC) Proposal Builder]과 63.0% 매칭. 사전환경 통과: Git repository detected (.git folder found)."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-pos-11",
+      "prompt": "src/services 내부 모듈 간의 원심 결합도(Ce)와 순환 의존성 관계 도출해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 2",
+      "expected_skill": "coupling-analysis",
+      "baseline": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "coupling-analysis",
+        "matching_rate": 0.82,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 2020.7,
+        "correct": true,
+        "rationale": "Top Star 스킬 [Code Coupling & Dependency Analyzer]과 82.0% 매칭. 사전환경 통과: Git repository detected (.git folder found)."
+      },
+      "profile": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "coupling-analysis",
+        "matching_rate": 0.82,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 985.2,
+        "correct": true,
+        "rationale": "Top Star 스킬 [Code Coupling & Dependency Analyzer]과 82.0% 매칭. 사전환경 통과: Git repository detected (.git folder found)."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-pos-12",
+      "prompt": "사용자 개인정보 처리 흐름에서 스푸핑과 정보유출에 대한 STRIDE 위협 모델링해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 2",
+      "expected_skill": "security-threat-model",
+      "baseline": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "security-threat-model",
+        "matching_rate": 0.71,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 1118.9,
+        "correct": true,
+        "rationale": "Top Star 스킬 [STRIDE Threat Modeler]과 71.0% 매칭. 사전환경 통과: Git repository detected (.git folder found)."
+      },
+      "profile": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "security-threat-model",
+        "matching_rate": 0.71,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 1092.7,
+        "correct": true,
+        "rationale": "Top Star 스킬 [STRIDE Threat Modeler]과 71.0% 매칭. 사전환경 통과: Git repository detected (.git folder found)."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-pos-13",
+      "prompt": "NestJS 앱에서 UserModule과 AuthModule 의존성을 분리하고 모듈러 모놀리스로 재구성해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 2",
+      "expected_skill": "nestjs-modular-monolith",
+      "baseline": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "nestjs-modular-monolith",
+        "matching_rate": 0.651,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 1102.0,
+        "correct": true,
+        "rationale": "Top Star 스킬 [NestJS Modular Monolith Architect]과 65.1% 매칭. 사전환경 통과: Node.js environment detected (package.json or node binary)."
+      },
+      "profile": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "nestjs-modular-monolith",
+        "matching_rate": 0.6958,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 1174.9,
+        "correct": true,
+        "rationale": "Top Star 스킬 [NestJS Modular Monolith Architect]과 69.6% 매칭. 사전환경 통과: Node.js environment detected (package.json or node binary)."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-pos-14",
+      "prompt": "React 컴포넌트에서 useMemo와 useCallback 오용으로 인한 성능 저하 개선해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 2",
+      "expected_skill": "react-best-practices",
+      "baseline": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "react-best-practices",
+        "matching_rate": 0.8,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 1442.5,
+        "correct": true,
+        "rationale": "Top Star 스킬 [React Best Practices & Performance Expert]과 80.0% 매칭. 사전환경 통과: Frontend UI workspace structure detected."
+      },
+      "profile": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "react-best-practices",
+        "matching_rate": 0.82,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 952.8,
+        "correct": true,
+        "rationale": "Top Star 스킬 [React Best Practices & Performance Expert]과 82.0% 매칭. 사전환경 통과: Frontend UI workspace structure detected."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-pos-15",
+      "prompt": "Expo Router 기반 React Native 모바일 화면 전환 내비게이션 구현해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 2",
+      "expected_skill": "react-native-expert",
+      "baseline": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "react-native-expert",
+        "matching_rate": 0.7722,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 1043.3,
+        "correct": true,
+        "rationale": "Top Star 스킬 [React Native & Expo Mobile Specialist]과 77.2% 매칭. 사전환경 통과: Node.js environment detected (package.json or node binary)."
+      },
+      "profile": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "react-native-expert",
+        "matching_rate": 0.79,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 993.6,
+        "correct": true,
+        "rationale": "Top Star 스킬 [React Native & Expo Mobile Specialist]과 79.0% 매칭. 사전환경 통과: Node.js environment detected (package.json or node binary)."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-pos-16",
+      "prompt": "신규 배포된 메인 페이지의 Lighthouse 성능, 웹 접근성, SEO 점수 리포트 뽑아줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 2",
+      "expected_skill": "perf-lighthouse",
+      "baseline": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "perf-lighthouse",
+        "matching_rate": 0.85,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 988.3,
+        "correct": true,
+        "rationale": "Top Star 스킬 [Lighthouse CI & Performance Auditor]과 85.0% 매칭. 사전환경 통과: Node.js environment detected (package.json or node binary)."
+      },
+      "profile": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "perf-lighthouse",
+        "matching_rate": 0.84,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 933.1,
+        "correct": true,
+        "rationale": "Top Star 스킬 [Lighthouse CI & Performance Auditor]과 84.0% 매칭. 사전환경 통과: Node.js environment detected (package.json or node binary)."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-pos-17",
+      "prompt": "Next.js 애플리케이션에 Sentry 캡처 연동하고 처리되지 않은 500 에러 추적해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 2",
+      "expected_skill": "sentry",
+      "baseline": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "sentry",
+        "matching_rate": 0.74,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 988.5,
+        "correct": true,
+        "rationale": "Top Star 스킬 [Sentry Error Monitoring & Issue Triage]과 74.0% 매칭. 사전환경 통과: Dependency manifest found: requirements.txt, pyproject.toml."
+      },
+      "profile": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "sentry",
+        "matching_rate": 0.76,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 964.9,
+        "correct": true,
+        "rationale": "Top Star 스킬 [Sentry Error Monitoring & Issue Triage]과 76.0% 매칭. 사전환경 통과: Dependency manifest found: requirements.txt, pyproject.toml."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-pos-18",
+      "prompt": "Cloudflare Pages에 프론트엔드 정적 웹앱 배포하고 커스텀 도메인 바인딩해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 2",
+      "expected_skill": "cloudflare-deploy",
+      "baseline": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "cloudflare-deploy",
+        "matching_rate": 0.86,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 998.3,
+        "correct": true,
+        "rationale": "Top Star 스킬 [Cloudflare Workers & Pages Deployer]과 86.0% 매칭. 사전환경 통과: Node.js environment detected (package.json or node binary)."
+      },
+      "profile": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "cloudflare-deploy",
+        "matching_rate": 0.87,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 912.1,
+        "correct": true,
+        "rationale": "Top Star 스킬 [Cloudflare Workers & Pages Deployer]과 87.0% 매칭. 사전환경 통과: Node.js environment detected (package.json or node binary)."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-pos-19",
+      "prompt": "LLM 프롬프트 변경 후 기존 응답 품질이 깨지지 않는지 벤치마크 하네스로 자동 평가해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 2",
+      "expected_skill": "spec-driven-eval",
+      "baseline": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "spec-driven-eval",
+        "matching_rate": 0.5148,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 899.9,
+        "correct": true,
+        "rationale": "Top Star 스킬 [Spec-Driven Benchmark & Eval Harness]과 51.5% 매칭. 사전환경 통과: Python test harness detected (pytest/pyproject/tests)."
+      },
+      "profile": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "spec-driven-eval",
+        "matching_rate": 0.5,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 971.9,
+        "correct": true,
+        "rationale": "Top Star 스킬 [Spec-Driven Benchmark & Eval Harness]과 50.0% 매칭. 사전환경 통과: Python test harness detected (pytest/pyproject/tests)."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-pos-20",
+      "prompt": "레거시 자바 스프링 3.0 모놀리스를 단계별로 분해하는 전환 로드맵과 롤백 방안 설계해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 2",
+      "expected_skill": "legacy-migration-planner",
+      "baseline": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "legacy-migration-planner",
+        "matching_rate": 0.6272,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 939.3,
+        "correct": true,
+        "rationale": "Top Star 스킬 [Legacy System Migration Planner]과 62.7% 매칭. 사전환경 통과: Git repository detected (.git folder found)."
+      },
+      "profile": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "legacy-migration-planner",
+        "matching_rate": 0.64,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 925.8,
+        "correct": true,
+        "rationale": "Top Star 스킬 [Legacy System Migration Planner]과 64.0% 매칭. 사전환경 통과: Git repository detected (.git folder found)."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-neg-01",
+      "prompt": "README 파일의 오탈자 1글자만 수정하고 커밋해줘 (기획서나 태스크 분할 절대 하지마)",
+      "category": "eval",
+      "is_negative": true,
+      "expected_tier": "Tier 1",
+      "expected_skill": null,
+      "baseline": {
+        "task_type": "TaskType.DETERMINISTIC_RULE",
+        "matched_skill": null,
+        "matching_rate": 0.8008,
+        "recommended_tier": "Tier 1",
+        "guarantee_badge": "Zero Token Rule",
+        "latency_ms": 903.9,
+        "correct": true,
+        "rationale": "높은 일치율(80.1%)로 로컬 규칙 엔진(임계값 70%)에서 즉시 처리 가능합니다."
+      },
+      "profile": {
+        "task_type": "TaskType.DETERMINISTIC_RULE",
+        "matched_skill": null,
+        "matching_rate": 0.8554,
+        "recommended_tier": "Tier 1",
+        "guarantee_badge": "Zero Token Rule",
+        "latency_ms": 889.9,
+        "correct": true,
+        "rationale": "높은 일치율(85.5%)로 로컬 규칙 엔진(임계값 70%)에서 즉시 처리 가능합니다."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-neg-02",
+      "prompt": "버튼 배경색 패딩 CSS 2px 늘려줘 (도메인 분리나 DDD 아키텍처 분석 금지)",
+      "category": "eval",
+      "is_negative": true,
+      "expected_tier": "Tier 1",
+      "expected_skill": null,
+      "baseline": {
+        "task_type": "TaskType.DETERMINISTIC_RULE",
+        "matched_skill": null,
+        "matching_rate": 0.5035,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 1038.4,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(50.3%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "profile": {
+        "task_type": "TaskType.DETERMINISTIC_RULE",
+        "matched_skill": null,
+        "matching_rate": 0.4275,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 918.1,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(42.8%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-neg-03",
+      "prompt": "백엔드에서 피보나치 수열 구하는 순수 파이썬 알고리즘 함수 작성해줘 (브라우저나 Playwright 쓰지마)",
+      "category": "eval",
+      "is_negative": true,
+      "expected_tier": "Tier 1",
+      "expected_skill": null,
+      "baseline": {
+        "task_type": "TaskType.DETERMINISTIC_RULE",
+        "matched_skill": null,
+        "matching_rate": 0.6231,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 904.9,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(62.3%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "profile": {
+        "task_type": "TaskType.DETERMINISTIC_RULE",
+        "matched_skill": null,
+        "matching_rate": 0.7068,
+        "recommended_tier": "Tier 1",
+        "guarantee_badge": "Zero Token Rule",
+        "latency_ms": 928.1,
+        "correct": true,
+        "rationale": "높은 일치율(70.7%)로 로컬 규칙 엔진(임계값 70%)에서 즉시 처리 가능합니다."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-neg-04",
+      "prompt": "메인 페이지 폰트 패밀리를 나눔고딕으로 변경해줘 (보안 점검이나 취약점 감사 아님)",
+      "category": "eval",
+      "is_negative": true,
+      "expected_tier": "Tier 1",
+      "expected_skill": null,
+      "baseline": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "figma-implement-design",
+        "matching_rate": 0.522,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 1006.8,
+        "correct": false,
+        "rationale": "Top Star 스킬 [Figma Design-to-Code Converter]과 52.2% 매칭. 사전환경 통과: Frontend UI workspace structure detected."
+      },
+      "profile": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "figma-implement-design",
+        "matching_rate": 0.7743,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 928.9,
+        "correct": false,
+        "rationale": "Top Star 스킬 [Figma Design-to-Code Converter]과 77.4% 매칭. 사전환경 통과: Frontend UI workspace structure detected."
+      },
+      "status": "✗ Both Fail"
+    },
+    {
+      "id": "eval-neg-05",
+      "prompt": "데이터베이스 테이블에 새 컬럼 id bigint 추가하는 마이그레이션 SQL 작성해줘 (피그마 디자인 구현 아님)",
+      "category": "eval",
+      "is_negative": true,
+      "expected_tier": "Tier 1",
+      "expected_skill": null,
+      "baseline": {
+        "task_type": "TaskType.DETERMINISTIC_RULE",
+        "matched_skill": null,
+        "matching_rate": 0.76,
+        "recommended_tier": "Tier 1",
+        "guarantee_badge": "Zero Token Rule",
+        "latency_ms": 1057.7,
+        "correct": true,
+        "rationale": "높은 일치율(76.0%)로 로컬 규칙 엔진(임계값 70%)에서 즉시 처리 가능합니다."
+      },
+      "profile": {
+        "task_type": "TaskType.DETERMINISTIC_RULE",
+        "matched_skill": null,
+        "matching_rate": 0.8075,
+        "recommended_tier": "Tier 1",
+        "guarantee_badge": "Zero Token Rule",
+        "latency_ms": 944.4,
+        "correct": true,
+        "rationale": "높은 일치율(80.8%)로 로컬 규칙 엔진(임계값 70%)에서 즉시 처리 가능합니다."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-neg-06",
+      "prompt": "이번 신규 사업 아이디어에 대해 자유롭게 상상하고 브레인스토밍해줘 (코드 리뷰나 채점 루브릭 아님)",
+      "category": "eval",
+      "is_negative": true,
+      "expected_tier": "Tier 3",
+      "expected_skill": null,
+      "baseline": {
+        "task_type": "TaskType.COMPLEX_REASONING",
+        "matched_skill": null,
+        "matching_rate": 0.72,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 892.6,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(72.0%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "profile": {
+        "task_type": "TaskType.COMPLEX_REASONING",
+        "matched_skill": null,
+        "matching_rate": 0.693,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 993.0,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(69.3%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-neg-07",
+      "prompt": "고객 홍보용 뉴스레터 이메일 마케팅 카피 3가지 버전 작성해줘 (CI 빌드 고치는 작업 아님)",
+      "category": "eval",
+      "is_negative": true,
+      "expected_tier": "Tier 3",
+      "expected_skill": null,
+      "baseline": {
+        "task_type": "TaskType.COMPLEX_REASONING",
+        "matched_skill": null,
+        "matching_rate": 0.5265,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 933.3,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(52.6%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "profile": {
+        "task_type": "TaskType.COMPLEX_REASONING",
+        "matched_skill": null,
+        "matching_rate": 0.5544,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 917.3,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(55.4%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-neg-08",
+      "prompt": "PostgreSQL 데이터베이스 슬로우 쿼리 인덱스 튜닝 방안 설명해줘 (프론트엔드 LCP 웹 바이탈 아님)",
+      "category": "eval",
+      "is_negative": true,
+      "expected_tier": "Tier 3",
+      "expected_skill": null,
+      "baseline": {
+        "task_type": "TaskType.COMPLEX_REASONING",
+        "matched_skill": null,
+        "matching_rate": 0.7885,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 1017.7,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(78.8%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "profile": {
+        "task_type": "TaskType.COMPLEX_REASONING",
+        "matched_skill": null,
+        "matching_rate": 0.7719,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 1010.6,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(77.2%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-neg-09",
+      "prompt": "깃 저장소 커밋 메시지 컨벤션 단 1줄 추가해줘 (거창한 아키텍처 결정 ADR 작성 아님)",
+      "category": "eval",
+      "is_negative": true,
+      "expected_tier": "Tier 1",
+      "expected_skill": null,
+      "baseline": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "coding-guidelines",
+        "matching_rate": 0.6204,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Discovered Skill",
+        "latency_ms": 1012.9,
+        "correct": false,
+        "rationale": "설치된 에이전트 스킬 [coding-guidelines]과 매칭(62.0%)되었습니다."
+      },
+      "profile": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "coding-guidelines",
+        "matching_rate": 0.564,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Discovered Skill",
+        "latency_ms": 1004.8,
+        "correct": false,
+        "rationale": "설치된 에이전트 스킬 [coding-guidelines]과 매칭(56.4%)되었습니다."
+      },
+      "status": "✗ Both Fail"
+    },
+    {
+      "id": "eval-neg-10",
+      "prompt": "프로덕션 긴급 장애 발생으로 방화벽 포트 443 임시 개방 핫픽스 적용 (RFC 제안서 논의할 시간 없음)",
+      "category": "eval",
+      "is_negative": true,
+      "expected_tier": "Tier 3",
+      "expected_skill": null,
+      "baseline": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "security-best-practices",
+        "matching_rate": 0.4648,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 894.8,
+        "correct": false,
+        "rationale": "Top Star 스킬 [Security Best Practices & SAST Auditor]과 46.5% 매칭. 사전환경 통과: Dependency manifest found: requirements.txt, pyproject.toml."
+      },
+      "profile": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "security-best-practices",
+        "matching_rate": 0.3192,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Verified & Ready",
+        "latency_ms": 935.7,
+        "correct": false,
+        "rationale": "Top Star 스킬 [Security Best Practices & SAST Auditor]과 31.9% 매칭. 사전환경 통과: Dependency manifest found: requirements.txt, pyproject.toml."
+      },
+      "status": "✗ Both Fail"
+    },
+    {
+      "id": "eval-neg-11",
+      "prompt": "단순 유틸리티 함수 math.sqrt() 단일 단위 테스트 작성해줘 (전체 결합도 분석 작업 아님)",
+      "category": "eval",
+      "is_negative": true,
+      "expected_tier": "Tier 1",
+      "expected_skill": null,
+      "baseline": {
+        "task_type": "TaskType.DETERMINISTIC_RULE",
+        "matched_skill": null,
+        "matching_rate": 0.637,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 961.7,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(63.7%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "profile": {
+        "task_type": "TaskType.DETERMINISTIC_RULE",
+        "matched_skill": null,
+        "matching_rate": 0.69,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 995.8,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(69.0%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-neg-12",
+      "prompt": "파이썬 코드에 black 포매터 돌려서 린트 에러만 정리해줘 (위협 모델링 아님)",
+      "category": "eval",
+      "is_negative": true,
+      "expected_tier": "Tier 1",
+      "expected_skill": null,
+      "baseline": {
+        "task_type": "TaskType.DETERMINISTIC_RULE",
+        "matched_skill": null,
+        "matching_rate": 0.6768,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 938.9,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(67.7%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "profile": {
+        "task_type": "TaskType.DETERMINISTIC_RULE",
+        "matched_skill": null,
+        "matching_rate": 0.7708,
+        "recommended_tier": "Tier 1",
+        "guarantee_badge": "Zero Token Rule",
+        "latency_ms": 897.1,
+        "correct": true,
+        "rationale": "높은 일치율(77.1%)로 로컬 규칙 엔진(임계값 70%)에서 즉시 처리 가능합니다."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-neg-13",
+      "prompt": "FastAPI 파이썬 비동기 엔드포인트 1개 만들어줘 (NestJS 프레임워크 아님)",
+      "category": "eval",
+      "is_negative": true,
+      "expected_tier": "Tier 3",
+      "expected_skill": null,
+      "baseline": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "coding-guidelines",
+        "matching_rate": 0.3382,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Discovered Skill",
+        "latency_ms": 1042.9,
+        "correct": false,
+        "rationale": "설치된 에이전트 스킬 [coding-guidelines]과 매칭(33.8%)되었습니다."
+      },
+      "profile": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "coding-guidelines",
+        "matching_rate": 0.3382,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Discovered Skill",
+        "latency_ms": 1071.5,
+        "correct": false,
+        "rationale": "설치된 에이전트 스킬 [coding-guidelines]과 매칭(33.8%)되었습니다."
+      },
+      "status": "✗ Both Fail"
+    },
+    {
+      "id": "eval-neg-14",
+      "prompt": "Vue 3 Composition API로 ToDo 리스트 컴포넌트 하나 짜줘 (React 패턴 아님)",
+      "category": "eval",
+      "is_negative": true,
+      "expected_tier": "Tier 3",
+      "expected_skill": null,
+      "baseline": {
+        "task_type": "TaskType.COMPLEX_REASONING",
+        "matched_skill": null,
+        "matching_rate": 0.5015,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 994.7,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(50.1%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "profile": {
+        "task_type": "TaskType.COMPLEX_REASONING",
+        "matched_skill": null,
+        "matching_rate": 0.3655,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 1006.8,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(36.5%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-neg-15",
+      "prompt": "단순 크롬 데스크톱 웹페이지에서 텍스트 복사 버튼 구현해줘 (모바일 React Native 앱 아님)",
+      "category": "eval",
+      "is_negative": true,
+      "expected_tier": "Tier 1",
+      "expected_skill": null,
+      "baseline": {
+        "task_type": "TaskType.STAR_SKILL",
+        "matched_skill": "coding-guidelines",
+        "matching_rate": 0.273,
+        "recommended_tier": "Tier 2",
+        "guarantee_badge": "Discovered Skill",
+        "latency_ms": 983.1,
+        "correct": false,
+        "rationale": "설치된 에이전트 스킬 [coding-guidelines]과 매칭(27.3%)되었습니다."
+      },
+      "profile": {
+        "task_type": "TaskType.DETERMINISTIC_RULE",
+        "matched_skill": null,
+        "matching_rate": 0.2484,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 992.5,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(24.8%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "status": "✓ Profile Win"
+    },
+    {
+      "id": "eval-det-01",
+      "prompt": "1024 * 768 수식 계산해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 1",
+      "expected_skill": null,
+      "baseline": {
+        "task_type": "TaskType.DETERMINISTIC_RULE",
+        "matched_skill": null,
+        "matching_rate": 0.95,
+        "recommended_tier": "Tier 1",
+        "guarantee_badge": "Zero Token Rule",
+        "latency_ms": 919.4,
+        "correct": true,
+        "rationale": "높은 일치율(95.0%)로 로컬 규칙 엔진(임계값 70%)에서 즉시 처리 가능합니다."
+      },
+      "profile": {
+        "task_type": "TaskType.DETERMINISTIC_RULE",
+        "matched_skill": null,
+        "matching_rate": 0.95,
+        "recommended_tier": "Tier 1",
+        "guarantee_badge": "Zero Token Rule",
+        "latency_ms": 909.9,
+        "correct": true,
+        "rationale": "높은 일치율(95.0%)로 로컬 규칙 엔진(임계값 70%)에서 즉시 처리 가능합니다."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-det-02",
+      "prompt": "이메일 주소 형식 유효성 검사하는 정규표현식(Regex) 작성해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 1",
+      "expected_skill": null,
+      "baseline": {
+        "task_type": "TaskType.DETERMINISTIC_RULE",
+        "matched_skill": null,
+        "matching_rate": 0.94,
+        "recommended_tier": "Tier 1",
+        "guarantee_badge": "Zero Token Rule",
+        "latency_ms": 905.5,
+        "correct": true,
+        "rationale": "높은 일치율(94.0%)로 로컬 규칙 엔진(임계값 70%)에서 즉시 처리 가능합니다."
+      },
+      "profile": {
+        "task_type": "TaskType.DETERMINISTIC_RULE",
+        "matched_skill": null,
+        "matching_rate": 0.93,
+        "recommended_tier": "Tier 1",
+        "guarantee_badge": "Zero Token Rule",
+        "latency_ms": 982.5,
+        "correct": true,
+        "rationale": "높은 일치율(93.0%)로 로컬 규칙 엔진(임계값 70%)에서 즉시 처리 가능합니다."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-det-03",
+      "prompt": "75 인치를 센티미터(cm)로 단위 변환해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 1",
+      "expected_skill": null,
+      "baseline": {
+        "task_type": "TaskType.DETERMINISTIC_RULE",
+        "matched_skill": null,
+        "matching_rate": 0.95,
+        "recommended_tier": "Tier 1",
+        "guarantee_badge": "Zero Token Rule",
+        "latency_ms": 954.7,
+        "correct": true,
+        "rationale": "높은 일치율(95.0%)로 로컬 규칙 엔진(임계값 70%)에서 즉시 처리 가능합니다."
+      },
+      "profile": {
+        "task_type": "TaskType.DETERMINISTIC_RULE",
+        "matched_skill": null,
+        "matching_rate": 0.95,
+        "recommended_tier": "Tier 1",
+        "guarantee_badge": "Zero Token Rule",
+        "latency_ms": 1026.2,
+        "correct": true,
+        "rationale": "높은 일치율(95.0%)로 로컬 규칙 엔진(임계값 70%)에서 즉시 처리 가능합니다."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-det-04",
+      "prompt": "JSON 문자열 파싱해서 들여쓰기 2칸으로 포맷팅해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 1",
+      "expected_skill": null,
+      "baseline": {
+        "task_type": "TaskType.DETERMINISTIC_RULE",
+        "matched_skill": null,
+        "matching_rate": 0.94,
+        "recommended_tier": "Tier 1",
+        "guarantee_badge": "Zero Token Rule",
+        "latency_ms": 1000.8,
+        "correct": true,
+        "rationale": "높은 일치율(94.0%)로 로컬 규칙 엔진(임계값 70%)에서 즉시 처리 가능합니다."
+      },
+      "profile": {
+        "task_type": "TaskType.DETERMINISTIC_RULE",
+        "matched_skill": null,
+        "matching_rate": 0.94,
+        "recommended_tier": "Tier 1",
+        "guarantee_badge": "Zero Token Rule",
+        "latency_ms": 1008.7,
+        "correct": true,
+        "rationale": "높은 일치율(94.0%)로 로컬 규칙 엔진(임계값 70%)에서 즉시 처리 가능합니다."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-det-05",
+      "prompt": "다음 쉼표로 구분된 CSV 문자열을 파이썬 리스트로 변환해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 1",
+      "expected_skill": null,
+      "baseline": {
+        "task_type": "TaskType.DETERMINISTIC_RULE",
+        "matched_skill": null,
+        "matching_rate": 0.94,
+        "recommended_tier": "Tier 1",
+        "guarantee_badge": "Zero Token Rule",
+        "latency_ms": 890.6,
+        "correct": true,
+        "rationale": "높은 일치율(94.0%)로 로컬 규칙 엔진(임계값 70%)에서 즉시 처리 가능합니다."
+      },
+      "profile": {
+        "task_type": "TaskType.DETERMINISTIC_RULE",
+        "matched_skill": null,
+        "matching_rate": 0.94,
+        "recommended_tier": "Tier 1",
+        "guarantee_badge": "Zero Token Rule",
+        "latency_ms": 918.6,
+        "correct": true,
+        "rationale": "높은 일치율(94.0%)로 로컬 규칙 엔진(임계값 70%)에서 즉시 처리 가능합니다."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-det-06",
+      "prompt": "섭씨 36.5도를 화씨 온도로 변환해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 1",
+      "expected_skill": null,
+      "baseline": {
+        "task_type": "TaskType.DETERMINISTIC_RULE",
+        "matched_skill": null,
+        "matching_rate": 0.96,
+        "recommended_tier": "Tier 1",
+        "guarantee_badge": "Zero Token Rule",
+        "latency_ms": 921.6,
+        "correct": true,
+        "rationale": "높은 일치율(96.0%)로 로컬 규칙 엔진(임계값 70%)에서 즉시 처리 가능합니다."
+      },
+      "profile": {
+        "task_type": "TaskType.DETERMINISTIC_RULE",
+        "matched_skill": null,
+        "matching_rate": 0.96,
+        "recommended_tier": "Tier 1",
+        "guarantee_badge": "Zero Token Rule",
+        "latency_ms": 973.8,
+        "correct": true,
+        "rationale": "높은 일치율(96.0%)로 로컬 규칙 엔진(임계값 70%)에서 즉시 처리 가능합니다."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-det-07",
+      "prompt": "주어진 문자열에서 모든 특수문자를 제거하는 정규식 작성해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 1",
+      "expected_skill": null,
+      "baseline": {
+        "task_type": "TaskType.DETERMINISTIC_RULE",
+        "matched_skill": null,
+        "matching_rate": 0.94,
+        "recommended_tier": "Tier 1",
+        "guarantee_badge": "Zero Token Rule",
+        "latency_ms": 976.0,
+        "correct": true,
+        "rationale": "높은 일치율(94.0%)로 로컬 규칙 엔진(임계값 70%)에서 즉시 처리 가능합니다."
+      },
+      "profile": {
+        "task_type": "TaskType.DETERMINISTIC_RULE",
+        "matched_skill": null,
+        "matching_rate": 0.94,
+        "recommended_tier": "Tier 1",
+        "guarantee_badge": "Zero Token Rule",
+        "latency_ms": 1011.1,
+        "correct": true,
+        "rationale": "높은 일치율(94.0%)로 로컬 규칙 엔진(임계값 70%)에서 즉시 처리 가능합니다."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-det-08",
+      "prompt": "3의 10제곱을 계산해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 1",
+      "expected_skill": null,
+      "baseline": {
+        "task_type": "TaskType.DETERMINISTIC_RULE",
+        "matched_skill": null,
+        "matching_rate": 0.95,
+        "recommended_tier": "Tier 1",
+        "guarantee_badge": "Zero Token Rule",
+        "latency_ms": 942.7,
+        "correct": true,
+        "rationale": "높은 일치율(95.0%)로 로컬 규칙 엔진(임계값 70%)에서 즉시 처리 가능합니다."
+      },
+      "profile": {
+        "task_type": "TaskType.DETERMINISTIC_RULE",
+        "matched_skill": null,
+        "matching_rate": 0.95,
+        "recommended_tier": "Tier 1",
+        "guarantee_badge": "Zero Token Rule",
+        "latency_ms": 925.0,
+        "correct": true,
+        "rationale": "높은 일치율(95.0%)로 로컬 규칙 엔진(임계값 70%)에서 즉시 처리 가능합니다."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-det-09",
+      "prompt": "yyyy-mm-dd 날짜 포맷을 Unix Timestamp 초 단위 정수로 변환해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 1",
+      "expected_skill": null,
+      "baseline": {
+        "task_type": "TaskType.DETERMINISTIC_RULE",
+        "matched_skill": null,
+        "matching_rate": 0.95,
+        "recommended_tier": "Tier 1",
+        "guarantee_badge": "Zero Token Rule",
+        "latency_ms": 1061.0,
+        "correct": true,
+        "rationale": "높은 일치율(95.0%)로 로컬 규칙 엔진(임계값 70%)에서 즉시 처리 가능합니다."
+      },
+      "profile": {
+        "task_type": "TaskType.DETERMINISTIC_RULE",
+        "matched_skill": null,
+        "matching_rate": 0.9405,
+        "recommended_tier": "Tier 1",
+        "guarantee_badge": "Zero Token Rule",
+        "latency_ms": 998.9,
+        "correct": true,
+        "rationale": "높은 일치율(94.0%)로 로컬 규칙 엔진(임계값 70%)에서 즉시 처리 가능합니다."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-det-10",
+      "prompt": "Base64 인코딩된 문자열 'SGVsbG8=' 디코딩해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 1",
+      "expected_skill": null,
+      "baseline": {
+        "task_type": "TaskType.DETERMINISTIC_RULE",
+        "matched_skill": null,
+        "matching_rate": 0.96,
+        "recommended_tier": "Tier 1",
+        "guarantee_badge": "Zero Token Rule",
+        "latency_ms": 1080.9,
+        "correct": true,
+        "rationale": "높은 일치율(96.0%)로 로컬 규칙 엔진(임계값 70%)에서 즉시 처리 가능합니다."
+      },
+      "profile": {
+        "task_type": "TaskType.DETERMINISTIC_RULE",
+        "matched_skill": null,
+        "matching_rate": 0.96,
+        "recommended_tier": "Tier 1",
+        "guarantee_badge": "Zero Token Rule",
+        "latency_ms": 1270.3,
+        "correct": true,
+        "rationale": "높은 일치율(96.0%)로 로컬 규칙 엔진(임계값 70%)에서 즉시 처리 가능합니다."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-reason-01",
+      "prompt": "인공지능과 자유의지에 관한 철학적 에세이를 3000자로 창작해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 3",
+      "expected_skill": null,
+      "baseline": {
+        "task_type": "TaskType.COMPLEX_REASONING",
+        "matched_skill": null,
+        "matching_rate": 0.55,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 937.5,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(55.0%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "profile": {
+        "task_type": "TaskType.COMPLEX_REASONING",
+        "matched_skill": null,
+        "matching_rate": 0.56,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 934.4,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(56.0%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-reason-02",
+      "prompt": "스타트업 B2B SaaS 비즈니스를 위한 글로벌 시장 진출 전략 보고서 작성해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 3",
+      "expected_skill": null,
+      "baseline": {
+        "task_type": "TaskType.COMPLEX_REASONING",
+        "matched_skill": null,
+        "matching_rate": 0.594,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 929.0,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(59.4%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "profile": {
+        "task_type": "TaskType.COMPLEX_REASONING",
+        "matched_skill": null,
+        "matching_rate": 0.5841,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 1053.6,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(58.4%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-reason-03",
+      "prompt": "SF 소설의 주인공 캐릭터 설정과 배경 세계관을 독창적으로 기획해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 3",
+      "expected_skill": null,
+      "baseline": {
+        "task_type": "TaskType.COMPLEX_REASONING",
+        "matched_skill": null,
+        "matching_rate": 0.75,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 945.5,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(75.0%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "profile": {
+        "task_type": "TaskType.COMPLEX_REASONING",
+        "matched_skill": null,
+        "matching_rate": 0.76,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 1117.6,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(76.0%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-reason-04",
+      "prompt": "투자 유치를 위한 엔젤 투자자 대상 5분 피칭 스피치 원고 작성해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 3",
+      "expected_skill": null,
+      "baseline": {
+        "task_type": "TaskType.COMPLEX_REASONING",
+        "matched_skill": null,
+        "matching_rate": 0.8217,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 1221.7,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(82.2%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "profile": {
+        "task_type": "TaskType.COMPLEX_REASONING",
+        "matched_skill": null,
+        "matching_rate": 0.8148,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 1008.1,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(81.5%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-reason-05",
+      "prompt": "팀 내 갈등 해결을 위한 비폭력 대화법(NVC) 코칭 시나리오를 작성해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 3",
+      "expected_skill": null,
+      "baseline": {
+        "task_type": "TaskType.COMPLEX_REASONING",
+        "matched_skill": null,
+        "matching_rate": 0.8514,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 1101.7,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(85.1%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "profile": {
+        "task_type": "TaskType.COMPLEX_REASONING",
+        "matched_skill": null,
+        "matching_rate": 0.8514,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 1073.3,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(85.1%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-reason-06",
+      "prompt": "양자역학의 다세계 해석과 코펜하겐 해석의 본질적 차이를 쉽게 설명해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 3",
+      "expected_skill": null,
+      "baseline": {
+        "task_type": "TaskType.COMPLEX_REASONING",
+        "matched_skill": null,
+        "matching_rate": 0.7742,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 947.9,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(77.4%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "profile": {
+        "task_type": "TaskType.COMPLEX_REASONING",
+        "matched_skill": null,
+        "matching_rate": 0.7566,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 1033.4,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(75.7%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-reason-07",
+      "prompt": "고객 불만 대응을 위한 정중하고 공감대 높은 고객지원 답변 서한 작성해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 3",
+      "expected_skill": null,
+      "baseline": {
+        "task_type": "TaskType.COMPLEX_REASONING",
+        "matched_skill": null,
+        "matching_rate": 0.8051,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 1134.2,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(80.5%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "profile": {
+        "task_type": "TaskType.COMPLEX_REASONING",
+        "matched_skill": null,
+        "matching_rate": 0.7885,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 1214.2,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(78.8%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-reason-08",
+      "prompt": "글로벌 거시경제 인플레이션과 환율 변동이 테크 기업에 미치는 영향 분석해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 3",
+      "expected_skill": null,
+      "baseline": {
+        "task_type": "TaskType.COMPLEX_REASONING",
+        "matched_skill": null,
+        "matching_rate": 0.53,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 1170.5,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(53.0%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "profile": {
+        "task_type": "TaskType.COMPLEX_REASONING",
+        "matched_skill": null,
+        "matching_rate": 0.59,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 932.3,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(59.0%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-reason-09",
+      "prompt": "신규 모바일 게임의 몰입형 퀘스트 스토리라인과 NPC 대사집 창작해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 3",
+      "expected_skill": null,
+      "baseline": {
+        "task_type": "TaskType.COMPLEX_REASONING",
+        "matched_skill": null,
+        "matching_rate": 0.8,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 1101.3,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(80.0%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "profile": {
+        "task_type": "TaskType.COMPLEX_REASONING",
+        "matched_skill": null,
+        "matching_rate": 0.78,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 1043.6,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(78.0%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-reason-10",
+      "prompt": "직장인을 위한 번아웃 예방 및 주간 회복 루틴 플랜을 설계해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 3",
+      "expected_skill": null,
+      "baseline": {
+        "task_type": "TaskType.COMPLEX_REASONING",
+        "matched_skill": null,
+        "matching_rate": 0.8217,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 1061.7,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(82.2%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "profile": {
+        "task_type": "TaskType.COMPLEX_REASONING",
+        "matched_skill": null,
+        "matching_rate": 0.8118,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 1127.6,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(81.2%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-vis-01",
+      "prompt": "첨부된 기하학 도형 그림에서 삼각형 각도 A의 크기를 판독해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 3",
+      "expected_skill": null,
+      "baseline": {
+        "task_type": "TaskType.VISION_OCR",
+        "matched_skill": null,
+        "matching_rate": 0.61,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 1083.6,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(61.0%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "profile": {
+        "task_type": "TaskType.VISION_OCR",
+        "matched_skill": null,
+        "matching_rate": 0.6,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 976.6,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(60.0%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-vis-02",
+      "prompt": "손글씨로 구겨진 영수증 사진에서 결제 총액과 품목명 OCR 인식해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 3",
+      "expected_skill": null,
+      "baseline": {
+        "task_type": "TaskType.VISION_OCR",
+        "matched_skill": null,
+        "matching_rate": 0.59,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 1053.9,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(59.0%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "profile": {
+        "task_type": "TaskType.VISION_OCR",
+        "matched_skill": null,
+        "matching_rate": 0.63,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 926.0,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(63.0%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-vis-03",
+      "prompt": "전기 전자 회로도 다이어그램 이미지에서 저항 R1과 커패시터 C2 연결 관계 판독해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 3",
+      "expected_skill": null,
+      "baseline": {
+        "task_type": "TaskType.VISION_OCR",
+        "matched_skill": null,
+        "matching_rate": 0.68,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 1131.0,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(68.0%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "profile": {
+        "task_type": "TaskType.VISION_OCR",
+        "matched_skill": null,
+        "matching_rate": 0.67,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 1076.5,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(67.0%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-vis-04",
+      "prompt": "흐릿하게 스캔된 고문서 한자 이미지에서 본문 문장 추출해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 3",
+      "expected_skill": null,
+      "baseline": {
+        "task_type": "TaskType.VISION_OCR",
+        "matched_skill": null,
+        "matching_rate": 0.72,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 1553.0,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(72.0%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "profile": {
+        "task_type": "TaskType.VISION_OCR",
+        "matched_skill": null,
+        "matching_rate": 0.72,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 3309.7,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(72.0%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "status": "✓ Both Green"
+    },
+    {
+      "id": "eval-vis-05",
+      "prompt": "스마트폰으로 촬영한 수기 설문지 체크박스 표시 결과 판독해줘",
+      "category": "eval",
+      "is_negative": false,
+      "expected_tier": "Tier 3",
+      "expected_skill": null,
+      "baseline": {
+        "task_type": "TaskType.VISION_OCR",
+        "matched_skill": null,
+        "matching_rate": 0.693,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 1484.4,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(69.3%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "profile": {
+        "task_type": "TaskType.VISION_OCR",
+        "matched_skill": null,
+        "matching_rate": 0.693,
+        "recommended_tier": "Tier 3",
+        "guarantee_badge": "Escalated to LLM",
+        "latency_ms": 1623.8,
+        "correct": true,
+        "rationale": "작업 복잡도 또는 낮은 로컬 적합도(69.3%)로 인해 파운데이션 LLM으로 에스컬레이션합니다."
+      },
+      "status": "✓ Both Green"
+    }
+  ]
+}

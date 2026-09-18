@@ -120,20 +120,27 @@ def route(
 @app.command()
 def catalog():
     """Display curated GitHub Top Star Skill Profiles and pre-flight health."""
-    table = Table(title="⭐ Curated GitHub Top Star Skill Knowledge Base", show_header=True, header_style="bold magenta")
-    table.add_column("Skill ID", style="bold cyan", width=24)
-    table.add_column("Domain", style="dim", width=22)
-    table.add_column("Preflight Health", width=18)
-    table.add_column("Triggers & Action", style="italic")
+    from app.knowledge_base import SkillKnowledgeBase
+    from app.preflight import run_preflight_checks
+    kb = SkillKnowledgeBase()
+    profiles = kb.list_profiles()
 
-    for sid, prof in TOP_STAR_SKILL_PROFILES.items():
-        passed, details = prof.precondition_check()
-        health = "[green]✓ Ready[/green]" if passed else "[yellow]⚠ Warning[/yellow]"
+    table = Table(title=f"⭐ Curated Canonical Skill Knowledge Base ({len(profiles)} Skills)", show_header=True, header_style="bold magenta")
+    table.add_column("Skill ID", style="bold cyan", width=22)
+    table.add_column("Domain", style="dim", width=20)
+    table.add_column("Preflight", width=14)
+    table.add_column("Key Triggers & Exclusions", style="italic")
+
+    for prof in profiles:
+        rep = run_preflight_checks(prof)
+        health = "[green]✓ Ready[/green]" if rep.passed else "[yellow]⚠ Warning[/yellow]"
+        pos = prof.application_conditions[0].text if prof.application_conditions else ""
+        neg = prof.exclusion_conditions[0].text if prof.exclusion_conditions else ""
         table.add_row(
-            sid,
+            prof.skill_id,
             prof.domain,
-            f"{health}\n[dim]({details[:16]}..)[/dim]",
-            f"[bold]{prof.display_name}[/bold]\nTriggers: {', '.join(prof.positive_triggers[:3])}..\nAction: {prof.recommended_action}"
+            f"{health}\n[dim]({rep.details[:14]}..)[/dim]",
+            f"[bold]{prof.display_name}[/bold]\n[green]+ {pos[:36]}..[/green]\n[red]- {neg[:36]}..[/red]"
         )
 
     console.print(table)

@@ -58,8 +58,29 @@ class PreflightChecker:
 
 def run_preflight_checks(profile: Any) -> PreflightReport:
     """Execute preflight check on a skill profile and generate structured report."""
-    passed, details = profile.precondition_check()
     skill_name = getattr(profile, "skill_id", getattr(profile, "name", "unknown"))
+
+    # If canonical profile with contract
+    if hasattr(profile, "preflight_contract"):
+        func_name = profile.preflight_contract.check_func_name
+        check_func = getattr(PreflightChecker, func_name, None)
+        if callable(check_func):
+            passed, details = check_func()
+        else:
+            passed, details = False, f"Unknown preflight check '{func_name}'"
+        return PreflightReport(
+            skill_name=skill_name,
+            passed=passed,
+            details=details,
+            checks=[details]
+        )
+
+    # Legacy profile with direct callable
+    if hasattr(profile, "precondition_check") and callable(profile.precondition_check):
+        passed, details = profile.precondition_check()
+    else:
+        passed, details = True, "No preflight check configured"
+
     return PreflightReport(
         skill_name=skill_name,
         passed=passed,

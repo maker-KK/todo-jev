@@ -1,11 +1,13 @@
 """Jev System One Classifier with Grounded Star Skills & Preflight Guarantees."""
 import os
 import httpx
+from typing import Literal, Optional
 from dotenv import load_dotenv
 from app.models import TaskType, RoutingTier, ClassificationResult
 from app.config import Settings, settings as default_settings
 from app.skill_registry import SkillRegistry
-from app.skill_profiles import TOP_STAR_SKILL_PROFILES, StarSkillProfile
+from app.knowledge_base import SkillKnowledgeBase, CanonicalSkillProfile
+from app.preflight import run_preflight_checks
 
 load_dotenv()
 
@@ -19,31 +21,37 @@ DEFAULT_ROLES_CRITERIA = {
 }
 
 class JevClassifier:
-    """Classifies user tasks using TypeSafe Jev System One model with Star Skill Grounding."""
+    """Classifies user tasks using TypeSafe Jev System One model with Canonical Star Skill Grounding."""
 
     def __init__(
         self,
-        api_key: str | None = None,
+        api_key: Optional[str] = None,
         timeout: float = 15.0,
-        settings: Settings | None = None,
-        registry: SkillRegistry | None = None,
+        settings: Optional[Settings] = None,
+        registry: Optional[SkillRegistry] = None,
+        kb: Optional[SkillKnowledgeBase] = None,
+        criteria_mode: Literal["profile", "baseline"] = "profile"
     ):
         self.settings = settings or default_settings
         self.api_key = api_key or os.getenv("TYPESAFE_API_KEY")
         self.timeout = timeout
         self.registry = registry or SkillRegistry()
+        self.kb = kb or SkillKnowledgeBase()
+        self.criteria_mode = criteria_mode
 
     def get_active_criteria(self) -> dict[str, str]:
-        """Get criteria for Jev, enriched with top star skills and installed skills."""
+        """Get criteria for Jev, selecting between baseline description or rich profile mode."""
         criteria = dict(DEFAULT_ROLES_CRITERIA)
         
-        # 1. Add top curated star skills
-        for sid, prof in TOP_STAR_SKILL_PROFILES.items():
-            criteria[f"skill:{sid}"] = f"[{prof.domain}] {prof.summary}"
+        # 1. Add canonical skill profiles from Knowledge Base
+        if self.criteria_mode == "baseline":
+            criteria.update(self.kb.build_baseline_criteria())
+        else:
+            criteria.update(self.kb.build_profile_criteria())
 
         # 2. Add other installed skills if auto-sync enabled
         if self.settings.auto_sync_skills:
-            synced_skills = self.registry.build_jev_criteria(max_skills=25)
+            synced_skills = self.registry.build_jev_criteria(max_skills=15)
             for skill_name, skill_desc in synced_skills.items():
                 k = f"skill:{skill_name}"
                 if k not in criteria:
@@ -122,12 +130,23 @@ class JevClassifier:
             matched_skill = skill_id
             task_type = TaskType.STAR_SKILL
 
-            # Check if this is a known top star profile with preflight
-            profile = TOP_STAR_SKILL_PROFILES.get(skill_id)
+            # Look up profile in Knowledge Base
+            profile = self.kb.get_profile(skill_id)
             if profile:
                 skill_domain = profile.domain
-                preflight_passed, preflight_details = profile.precondition_check()
-                if preflight_passed:
+                rep = run_preflight_checks(profile)
+                preflight_passed = rep.passed
+                preflight_details = rep.details
+
+                # Veto constraint check in prompt
+                lower = prompt.lower()
+                veto_hit = any(ex.text.lower() in lower for ex in profile.exclusion_conditions)
+
+                if veto_hit:
+                    guarantee_badge = "Veto Triggered"
+                    recommended_tier = RoutingTier.TIER_3_FOUNDATION_LLM
+                    rationale = f"스킬 [{profile.display_name}]이 추천되었으나 제외 조건에 해당되어 상위 LLM으로 에스컬레이션합니다."
+                elif preflight_passed:
                     guarantee_badge = "Verified & Ready"
                     recommended_tier = RoutingTier.TIER_2_JEV_DECISION
                     rationale = f"Top Star 스킬 [{profile.display_name}]과 {matching_rate:.1%} 매칭. 사전환경 통과: {preflight_details}."
@@ -180,26 +199,32 @@ class JevClassifier:
         )
 
     def _heuristic_fallback(self, prompt: str, rationale: str) -> ClassificationResult:
-        """Fast offline heuristic mapping against Top Star Skills."""
+        """Fast offline heuristic mapping against 20 Canonical Skills."""
         lower = prompt.lower()
         
-        # Check Star Skill Triggers
-        for sid, prof in TOP_STAR_SKILL_PROFILES.items():
-            if any(trig.lower() in lower for trig in prof.positive_triggers):
-                passed, details = prof.precondition_check()
-                badge = "Verified & Ready" if passed else "Pre-flight Warning"
+        # Check profiles from Knowledge Base
+        for p in self.kb.list_profiles():
+            # Check exclusions first
+            if any(ex.text.lower() in lower for ex in p.exclusion_conditions):
+                continue
+
+            # Check positive triggers
+            if any(tr.lower() in lower for tr in p.positive_triggers) or p.skill_id in lower or p.display_name.lower() in lower:
+                rep = run_preflight_checks(p)
+                badge = "Verified & Ready" if rep.passed else "Pre-flight Warning"
+                tier = RoutingTier.TIER_2_JEV_DECISION if rep.passed else RoutingTier.TIER_3_FOUNDATION_LLM
                 return ClassificationResult(
                     prompt=prompt,
                     task_type=TaskType.STAR_SKILL,
                     type_confidence=0.92,
-                    can_handle_locally=0.90 if passed else 0.40,
-                    matching_rate=0.828 if passed else 0.368,
-                    recommended_tier=RoutingTier.TIER_2_JEV_DECISION if passed else RoutingTier.TIER_3_FOUNDATION_LLM,
-                    rationale=f"오프라인 룰: Top Star 스킬 [{prof.display_name}] 감지. 사전환경: {details}.",
-                    matched_skill=sid,
-                    skill_domain=prof.domain,
-                    preflight_passed=passed,
-                    preflight_details=details,
+                    can_handle_locally=0.90 if rep.passed else 0.40,
+                    matching_rate=0.828 if rep.passed else 0.368,
+                    recommended_tier=tier,
+                    rationale=f"오프라인 룰: Canonical 스킬 [{p.display_name}] 감지. 사전환경: {rep.details}.",
+                    matched_skill=p.skill_id,
+                    skill_domain=p.domain,
+                    preflight_passed=rep.passed,
+                    preflight_details=rep.details,
                     guarantee_badge=badge
                 )
 

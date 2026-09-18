@@ -2,7 +2,7 @@
 
 # ⚡ To do - Jev
 
-**Ultra-fast, low-cost intelligent task classifier & 3-tier routing engine powered by TypeSafe Jev (System One) and Curated Top Star Agent Skills with Pre-flight Guarantees.**
+**Ultra-fast, low-cost intelligent task classifier & 3-tier routing engine powered by TypeSafe Jev (System One) and 20 Verified Canonical Agent Skill Profiles with Pre-flight Guarantees.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python: >=3.10](https://img.shields.io/badge/Python->=3.10-blue.svg)](https://www.python.org/)
@@ -22,7 +22,7 @@ In modern AI agent systems, **up to 70-80% of incoming tasks do not require a ma
 
 **To do - Jev** solves both problems:
 1. **System One Routing**: Places **TypeSafe Jev** ($0.042/M tokens, $0 output, ~150ms) as a lightweight gatekeeper calculating a calibrated **Matching Rate** across 3 tiers.
-2. **Grounded Skill Guarantees**: Curates top star agent skills from the GitHub ecosystem, pairing each with **deterministic pre-flight checks** and **veto constraints** before execution.
+2. **Grounded Skill Guarantees**: Decouples and verifies **20 Canonical Top Star Skill Profiles**, pairing each with **deterministic pre-flight checks** and **veto constraints** before execution.
 
 ---
 
@@ -50,29 +50,47 @@ A description in `SKILL.md` is merely a claim; **real suitability requires machi
 3. **Separation of Concerns**: Author != Verifier (`the-judge` model).
 4. **Graceful Escalation**: If preflight fails, Jev automatically downgrades to Tier 3 LLM with a clear diagnosis instead of failing at runtime.
 
-### Curated Top Star Skill Profiles
+### 20 Verified Canonical Skill Profiles (`data/canonical_skill_profiles.json`)
 
-| Skill ID | Domain | Pre-flight Check | Typical Action & Deliverable |
+All 20 profiles are cryptographically linked (SHA256 verified) to actual installed skills:
+
+| Skill ID | Domain | Pre-flight Check | Key Deliverable |
 |---|---|---|---|
-| `tlc-spec-driven` | Planning & Architecture | Git repo present | EARS specification, atomic task breakdown, verification gates |
-| `tactical-ddd` | Architecture & Refactoring | Git repo present | Bounded Context analysis, Dependency Inversion diagrams |
+| `tlc-spec-driven` | Planning & Architecture | Git repo present | EARS specification, atomic tasks, verification gates |
+| `tactical-ddd` | Architecture & Refactoring | Git repo present | Bounded Context analysis, Dependency Inversion |
 | `playwright-skill` | Testing & Web Automation | Node.js / npm environment | Headless browser scripts, UI regression snapshots |
 | `security-best-practices` | Security & Compliance | Dependency manifests | SAST vulnerability audit, OWASP Top 10 remediation |
 | `figma-implement-design` | Frontend & Design | Frontend UI workspace | Pixel-perfect React/Tailwind component generation |
 | `the-judge` | Quality & Verification | Python test runner (pytest) | Adversarial PR review, independent rubric evaluation |
 | `gh-fix-ci` | DevOps & Tooling | Git repository | CI/CD failure log parsing, local repro scripts, auto-patches |
+| `core-web-vitals` | Web Performance | Frontend project | LCP, INP, CLS metric diagnosis & asset optimization |
+| `create-adr` | Architecture & Docs | Git repository | Architecture Decision Records (Context, Decision, Consequences) |
+| `create-rfc` | Architecture & Planning | Git repository | Request For Comments proposal specification |
+| `coupling-analysis` | Architecture & Quality | Git repository | Afferent/Efferent coupling & circular dependency detection |
+| `security-threat-model` | Security & Risk | Git repository | STRIDE threat modeling & data flow diagram review |
+| `nestjs-modular-monolith` | Backend & Architecture | Node.js environment | NestJS modular monolith boundaries & CQRS |
+| `react-best-practices` | Frontend & React | Frontend project | React 19 rules, hook misuse prevention & render optimization |
+| `react-native-expert` | Mobile Development | Node.js environment | Expo Router navigation, cross-platform permissions |
+| `perf-lighthouse` | Performance & CI | Node.js / lighthouse | Automated a11y, SEO, and performance audit reports |
+| `sentry` | Observability & DevOps | Dependency manifests | Runtime exception tracking & issue triage |
+| `cloudflare-deploy` | Cloud & Edge | Node.js / wrangler | Cloudflare Workers, Pages, D1 edge deployment |
+| `spec-driven-eval` | Evaluation & Testing | Python test runner | Spec-driven benchmark harness & regression testing |
+| `legacy-migration-planner` | Architecture & Modernization | Git repository | Strangler Fig modernization roadmap & rollback planning |
 
 ---
 
-## 📊 Cost & Latency Benchmark
+## 📊 Live Evaluation Benchmark (60 Unseen Prompts)
 
-| Execution Tier | Handled Tasks | Typical Cost | Latency | Example Use Case |
-|---|---|---|---|---|
-| **Tier 1: Local Rule** | ~35% | **$0.000** | **< 5 ms** | Unit conversions, regex parsing, arithmetic formulas |
-| **Tier 2: Jev / Star Skill** | ~40% | **$0.00004** | **~150 ms** | Answer sheet-to-problem binding, verified EARS planning |
-| **Tier 3: Foundation LLM** | ~25% | $0.003 ~ $0.02 | ~2,000 ms | Complex novel coding, creative essay writing, image analysis |
+Evaluated on **60 unseen Korean prompts** using the live TypeSafe Jev System One API (`https://api.typesafe.ai/v1/systemone`):
 
-> 💡 **Result:** Overall agent workflow operating costs drop by **up to 88%** with a **5x throughput boost**.
+| Metric | Baseline Mode (Simple Description) | Profile Mode (Grounded Knowledge Base) | Delta |
+|---|---|---|---|
+| **Overall Accuracy** | **91.7%** (55/60) | **93.3%** (56/60) | **+1.7%** |
+| **Positive Skill Matching** | **100.0%** (20/20) | **100.0%** (20/20) | **0.0%** (Perfect) |
+| **Negative Veto Accuracy** | **66.7%** (10/15) | **73.3%** (11/15) | **+6.6%** (Improved) |
+| **Average Latency** | 1,047.9 ms | 1,047.7 ms | ~0.0 ms |
+
+> 💡 **Key Finding:** Adding structured application conditions and negative veto constraints improved false positive resistance by **+6.6%** without incurring any measurable latency penalty.
 
 ---
 
@@ -104,55 +122,21 @@ AUTO_SYNC_SKILLS=true
 
 ### 3. CLI Commands
 
-#### ⚡ Classify and Route a Task
 ```bash
-# Default clean one-line report
+# 1. Default clean one-line routing
 python -m app.cli route "신규 결제 기능 EARS 기획서 작성하고 태스크 분할해줘"
 
-# Detailed verdict table with preflight diagnostics
+# 2. Detailed routing table with preflight verification
 python -m app.cli route "신규 결제 기능 기획서 작성해줘" --format detailed
 
-# Override threshold and toggle auto-sync
-python -m app.cli route "15 + 27 수식 계산해줘" --threshold 0.85 --no-auto-sync
-```
-
-#### ⭐ Inspect Curated Star Skill Catalog
-```bash
+# 3. Inspect all 20 curated canonical skill profiles
 python -m app.cli catalog
-```
 
-#### 📦 List Discovered Local Agent Skills
-```bash
+# 4. List discovered local agent skills
 python -m app.cli skills
-```
 
-#### 🚀 Run Built-in Benchmark Demo
-```bash
-python -m app.cli demo
-```
-
----
-
-## 💻 Python SDK Usage
-
-```python
-import asyncio
-from app.router import TaskRouter
-
-async def main():
-    router = TaskRouter()
-    
-    # 1. Classified with Star Skill matching & Preflight Guarantee
-    result = await router.route_and_execute("신규 결제 기능 EARS 기획서 작성하고 태스크 분할해줘")
-    
-    clf = result["classification"]
-    print("Recommended Tier:", clf["recommended_tier"])
-    print("Matched Skill:", clf.get("matched_skill"))
-    print("Preflight Status:", clf.get("preflight_details"))
-    print("Guarantee Badge:", clf.get("guarantee_badge"))
-    print("Matching Rate:", f"{clf['matching_rate']:.1%}")
-
-asyncio.run(main())
+# 5. Run live comparative evaluation benchmark
+python scripts/run_eval_comparison.py
 ```
 
 ---
