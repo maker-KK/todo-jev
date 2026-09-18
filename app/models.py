@@ -8,6 +8,7 @@ class TaskType(str, Enum):
     JEV_STRUCTURED = "jev_structured"
     VISION_OCR = "vision_ocr"
     COMPLEX_REASONING = "complex_reasoning"
+    STAR_SKILL = "star_skill"
     UNKNOWN = "unknown"
 
 class RoutingTier(str, Enum):
@@ -23,4 +24,12 @@ class ClassificationResult(BaseModel):
     matching_rate: float = Field(ge=0.0, le=1.0)
     recommended_tier: RoutingTier
     rationale: str
+    
+    # Grounded Star Skill & Guarantee Fields
+    matched_skill: str | None = None
+    skill_domain: str | None = None
+    preflight_passed: bool = True
+    preflight_details: str | None = None
+    guarantee_badge: str = "Unverified"
+    
     raw_response: dict[str, Any] | None = None
